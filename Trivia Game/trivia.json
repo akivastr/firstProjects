@@ -1,0 +1,128 @@
+[
+    [
+        {
+            "id": "0",
+            "level": "1",
+            "question": "Which month is Sukkos in?",
+            "choices": [
+                "Elul",
+                "Nissan",
+                "Tishrei",
+                "Adar"
+            ],
+            "answer": "Tishrei"
+        },
+        {
+            "id": "1",
+            "level": "1",
+            "question": "How many Hakafos are there on Simchas Torah?",
+            "choices": [
+                "17",
+                "7",
+                "1",
+                "8"
+            ],
+            "answer": "7"
+        }
+    ],
+    [
+        {
+            "id": "2",
+            "level": "2",
+            "question": "What day of Tishrei is Yom Kippur?",
+            "choices": [
+                "25",
+                "15",
+                "1",
+                "10"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": "3",
+            "level": "2",
+            "question": "Which of the following is NOT one of the 5 forbidden pleasures on Yom Kippur ?",
+            "choices": [
+                "relaxing",
+                "smearing",
+                "drinking",
+                "washing"
+            ],
+            "answer": "relaxing"
+        },
+        {
+            "id": "4",
+            "level": "2",
+            "question": "Who composed the Brachos of Shmona Esrei ?",
+            "choices": [
+                "Moshe Rabeinu",
+                "Avraham Avinu",
+                "The Anshei Kneses Hagedola",
+                "The Rambam"
+            ],
+            "answer": "The Anshei Kneses Hagedola"
+        },
+        {
+            "id": "4",
+            "level": "2",
+            "question": "Who composed the Bracha of Al Netilas Lulav?",
+            "choices": [
+                "Moshe Rabeinu",
+                "The Anshei Kneses Hagedola",
+                "Avraham Avinu",
+                "The Rambam"
+            ],
+            "answer": "The Anshei Kneses Hagedola"
+        },
+        {
+            "id": "5",
+            "level": "2",
+            "question": "Which Shevet do Kohanim come from?",
+            "choices": [
+                "Levi",
+                "Reuvain",
+                "Aharon Hakohein",
+                "Yehuda"
+            ],
+            "answer": "Levi"
+        },
+        {
+            "id": "6",
+            "level": "2",
+            "question": "How many days of Sefiras Haomer are there?",
+            "choices": [
+                "50",
+                "40",
+                "49",
+                "60"
+            ],
+            "answer": "49"
+        }
+    ],
+    [
+        {
+            "id": "7",
+            "level": "3",
+            "question": "Which of these brachos are Min Hatorah?",
+            "choices": [
+                "Shecheyanu",
+                "Asher Yatzar",
+                "Borei Nafashos",
+                "Birchas Hamazon"
+            ],
+            "answer": "Birchas Hamazon"
+        },
+        {
+            "id": "8",
+            "level": "3",
+            "question": "Who wrote Talmud Bavli?",
+            "choices": [
+                "Rav and Shmuel",
+                "Ravina and Rav Ashi",
+                "Abaya and Rava",
+                "Hillel and Shamai"
+            ],
+            "answer": "Ravina and Rav Ashi"
+        }
+    ]
+]
