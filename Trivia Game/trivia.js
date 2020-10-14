@@ -12,7 +12,7 @@
     const points = $('#points');
     points.text(0);
     $('body').css('color', 'white');
-    theMessage.hide(); console.log();
+    theMessage.hide(); 
 
 
 
