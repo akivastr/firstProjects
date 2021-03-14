@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <div className="home">
                 <img src={stockPic} alt="stock-ticker pic" />
-                <h1>Market Data  <br />in Real-Time</h1>
+                <h1 id="slide">Market Data  <br />in Real-Time</h1>
                 <Navbar />
                 <Footer />
             </div>
