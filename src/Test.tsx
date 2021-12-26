@@ -9,13 +9,24 @@ interface IProps {
 
 const Test = ({ setStocks, stocks }: IProps) => {
     const [options, setOptions] = useState([])
-    console.log("🚀 ~ file: Test.tsx ~ line 12 ~ Test ~ options", options)
     const [stockInput, setStockInput] = useState('')
     const [amountInput, setAmountInput] = useState<string>('')
     const [targetPercentage, setTargetPercentage] = useState('')
+    const [targetPercentageError, setTargetPercentageError] = useState(false)
+    const handleTargetPercentageChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+        setTargetPercentage(e.target.value)
+        const totalPercentage = stocks.reduce((pre, cur) => pre + +cur.targetPercentage, +e.target.value)
+        if (totalPercentage > 100) {
+            setTargetPercentageError(true)
+        } else {
+            setTargetPercentageError(false)
+        }
+    }
 
     useEffect(() => {
         (async () => getOptions())()
+        const savedStocks = JSON.parse(localStorage.getItem("stocks") as string)
+        setStocks(savedStocks)
     }, []);
 
     async function getOptions() {
@@ -25,7 +36,6 @@ const Test = ({ setStocks, stocks }: IProps) => {
                 throw new Error(response.statusText)
             }
             const r = await response.json();
-            console.log("🚀 ~ file: Test.tsx ~ line 28 ~ getOptions ~ r", r)
             console.log('the companies:', r.companies);
             setOptions(r.companies);
         } catch (error) {
@@ -41,7 +51,7 @@ const Test = ({ setStocks, stocks }: IProps) => {
     }
 
     return (
-        <Box mt="10px" display="flex" justifyContent="center">
+        <Box mt="10px" height="70px" display="flex" justifyContent="center">
             <Autocomplete
                 sx={{ width: '250px' }}
                 onInputChange={(e, v) => setStockInput(v.toUpperCase())}
@@ -65,12 +75,14 @@ const Test = ({ setStocks, stocks }: IProps) => {
                 value={amountInput}
             />
             <TextField
+                error={targetPercentageError}
+                helperText={targetPercentageError ? 'Amount exceeds 100%' : ''}
                 type="number"
                 label="Enter target percentage"
-                onChange={(e) => setTargetPercentage(e.target.value)}
+                onChange={(e) => handleTargetPercentageChange(e)}
                 value={targetPercentage}
             />
-            <Button onClick={handleClick} style={{ backgroundColor: 'rgb(128,128,242)' }} variant="contained">
+            <Button disabled={targetPercentageError} onClick={handleClick} style={{ maxHeight: '55px', backgroundColor: 'rgb(128,128,242)' }} variant="contained">
                 Add
             </Button>
         </Box>
